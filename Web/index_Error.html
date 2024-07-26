@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Bienvenida</title>
+    <title>Desconectado</title>
     <style>
         body {
-            background-color: black;
+            background-color: #0000AA;
             color: white;
+            font-family: 'Courier New', Courier, monospace;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-size: 48px;
+            text-align: center;
+        }
+        .error-message {
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Cerrado..</h1>
-    <p>Hasta nuevo aviso</p>
+    <div class="error-message">
+        <p class="error-code">*_*</p>
+        <p>Oh oh, parece que no estan reclutando o no esta en funcionamiento. </p>
+        <p>Tendras que esperar</p>
+        <p>INTERNAL_ERROR</p>
+        <p>Información técnica:</p>
+        <p>*** STOP: 0x0000000A (0x00000000, 0x00000001, 0x00000002, 0x00000003)</p>
+        <p>Nota: Floppato furry descuido</p>
+    </div>
 </body>
 </html>
