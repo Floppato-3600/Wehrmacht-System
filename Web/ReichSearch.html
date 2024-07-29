@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Google</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .search-box {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+            background-color: #0f3460;
+            color: #ffffff;
+        }
+        .search-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e94560;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #e02345;
+        }
+        .decoration {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #e94560;
+        }
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            color: #e94560;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Custom Search</div>
+        <form id="searchForm" onsubmit="redirectToPage(event)">
+            <input type="text" id="searchInput" class="search-box" placeholder="Search here...">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+        <div class="decoration">Search the web with style!</div>
+    </div>
+
+    <script>
+        function redirectToPage(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value.toLowerCase();
+
+            if (query.includes('cats)) {
+                window.location.href = 'https://en.wikipedia.org/wiki/Cat';
+            } else if (query.includes('dogs')) {
+                window.location.href = 'https://en.wikipedia.org/wiki/Dog';
+            } else if (query.includes('news')) {
+                window.location.href = 'https://news.google.com/';
+            } else {
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            }
+        }
+    </script>
+</body>
+</html>
